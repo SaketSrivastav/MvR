@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Template &middot; Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+	#div1 {width:15%;height:550px;border:1px solid #aaaaaa}
+    #div2 {width:65%;height:550px}
+    #div3 {width:15%;height:550px;border:1px solid #aaaaaa}
+
+      body {
+        padding-top: 20px;
+        padding-bottom: 60px;
+      }
+
+      /* Custom container */
+      .container {
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+      .container > hr {
+        margin: 60px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 80px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 100px;
+        line-height: 1;
+      }
+      .jumbotron .lead {
+        font-size: 24px;
+        line-height: 1.25;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+
+
+      /* Customize the navbar links to be fill the entire space of the .navbar */
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <h3 class="muted">Quick Sep - The Game</h3>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Play</a></li>
+                <li><a href="#">Create Game</a></li>
+				<li><a href="#">Fastest</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- /.navbar -->
+      </div>
+
+	  <h2 id="divTim">
+	</h2>
+
+	  
+  	<div id="div1" style="float: left" ondrop="drop(event)" ondragover="allowDrop(event)" >Numbers</div>
+ 
+	<div class="mainRunner" id="div2" style="float: left"  >
+	<center>
+		<img id="1" class="img1" src="1.png" draggable="true" title="200" ondragstart="drag(event)" width="100" height="69" style="z-index: 1;position: absolute;"/>
+		<img id="2" class="img2" src="2.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 2;position: absolute;" />
+		<img id="3" class="img1" src="a.png" draggable="true" title="100" ondragstart="drag(event)" width="100" height="69" style="z-index: 3;position: absolute;"/>
+		<img id="4" class="img2" src="b.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 4;position: absolute;" />
+		<img id="5" class="img1" src="3.png" draggable="true" title="200" ondragstart="drag(event)" width="100" height="69" style="z-index: 5;position: absolute;"/>
+		<img id="6" class="img2" src="4.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 6;position: absolute;"/>
+		<img id="7" class="img1" src="c.png" draggable="true" title="100" ondragstart="drag(event)" width="100" height="69" style="z-index: 7;position: absolute;"/>
+		<img id="8" class="img2" src="d.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 8;position: absolute;" />
+		<img id="9" class="img2" src="5.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 9;position: absolute;"/>
+		<img id="10" class="img2" src="e.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 10;position: absolute;" />
+		<img id="11" class="img2" src="6.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 11;position: absolute;"/>
+		<img id="12" class="img2" src="f.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 12;position: absolute;" />
+		<img id="13" class="img2" src="g.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 13;position: absolute;" />
+		<img id="14" class="img2" src="h.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 14;position: absolute;" />
+		<img id="15" class="img2" src="i.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 15;position: absolute;" />
+		<img id="16" class="img2" src="7.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 16;position: absolute;"/>
+		<img id="17" class="img2" src="j.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 17;position: absolute;" />
+		<img id="18" class="img2" src="8.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 18;position: absolute;"/>
+		<img id="19" class="img2" src="9.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 19;position: absolute;"/>
+		<img id="20" class="img2" src="10.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 20;position: absolute;"/>
+		<img id="21" class="img2" src="11.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 21;position: absolute;"/>
+		<img id="22" class="img2" src="12.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 22;position: absolute;"/>
+		<img id="23" class="img2" src="13.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 23;position: absolute;"/>
+		<img id="24" class="img2" src="k.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 24;position: absolute;" />
+		<img id="25" class="img2" src="14.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 25;position: absolute;"/>
+		<img id="26" class="img2" src="l.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 26;position: absolute;" />
+		<img id="27" class="img2" src="15.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 27;position: absolute;"/>
+		<img id="28" class="img2" src="m.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 28;position: absolute;" />
+		<img id="29" class="img2" src="16.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 29;position: absolute;"/>
+		<img id="30" class="img2" src="n.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 30;position: absolute;" />
+		<img id="31" class="img2" src="o.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 31;position: absolute;" />
+		<img id="32" class="img2" src="p.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 32;position: absolute;" />
+		<img id="33" class="img2" src="q.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 33;position: absolute;" />
+		<img id="34" class="img2" src="r.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 34;position: absolute;" />
+		<img id="35" class="img2" src="s.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 35;position: absolute;" />
+		<img id="36" class="img2" src="t.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 36;position: absolute;" />
+		<img id="37" class="img2" src="u.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 37;position: absolute;" />
+		<img id="38" class="img2" src="v.png" draggable="true" title= "100" ondragstart="drag(event)" width="100" height="69" style="z-index: 38;position: absolute;" />
+		<img id="39" class="img2" src="17.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 39;position: absolute;"/>
+		<img id="40" class="img2" src="18.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 40;position: absolute;"/>
+		<img id="41" class="img2" src="19.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 41;position: absolute;"/>
+		<img id="42" class="img2" src="20.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" style="z-index: 42;position: absolute;"/>
+	</center>
+	</div>
+	
+	<div id="div3" style="float: left" ondrop="drop2(event)" ondragover="allowDrop(event)">Alphabets</div>
+	
+      <div class="footer" style="float: left;clear: left;padding-top:20px;width:100%">
+	  <hr>
+        <p>&copy; TorjansList  2012</p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+	<script src="js/main.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

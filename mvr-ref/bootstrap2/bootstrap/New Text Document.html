@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+<!--#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}-->
+#div1 {width:15%;height:600px;border:1px solid #aaaaaa}
+#div2 {width:65%;height:600px}
+#div3 {width:15%;height:600px;border:1px solid #aaaaaa}
+
+.img1
+{
+    border: 1px solid #f00;
+    position: relative;
+    z-index: 2;
+}
+
+.img2
+{
+    border: 1px solid #0f0;
+    position: relative;
+    z-index: 1;
+    top: -12px;
+    left: -20px;
+}
+</style>
+<script>
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+	if(document.getElementById(data).title == 100)
+	{
+		alert("100");
+	}
+	else{
+	     alert("200");
+	}
+}
+function drop2(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+alert(document.getElementById(data).title);
+	if(document.getElementById(data).title == 100)
+	{
+		alert("100");
+	}
+	else{
+	     alert("200");
+	}
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<!--<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="div2" ondrop="drop2(event)" ondragover="allowDrop(event)"></div>-->
+<div style="width: 100%;">
+
+	<div id="div1" style="float: left" ondrop="drop(event)" ondragover="allowDrop(event)" >Left Stuff</div>
+ 
+	<div class="mainRunner" id="div2" style="float: left"  >
+		<img id="1" class="img1" src="1.png" draggable="true" title="100" ondragstart="drag(event)" width="100" height="69" />
+		<img id="2" class="img2" src="2.png" draggable="true" title= "200" ondragstart="drag(event)" width="100" height="69" />
+	</div>
+	
+	<div id="div3" style="float: left" ondrop="drop2(event)" ondragover="allowDrop(event)">Right Stuff</div>
+ 
+</div>
+
+</body>
+</html>
+

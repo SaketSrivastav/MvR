@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Timer</title>
+<script type=\"text/javascript\">
+	var seconds = 0;
+	var minutes = 0;
+	
+function zeroPad(time) {
+	var numZeropad = time + '';
+	while(numZeropad.length < 2) {
+		numZeropad = \"0\" + numZeropad;
+		}
+	return numZeropad;
+	}
+
+	function countSecs() {
+    	seconds++;
+
+		if (seconds > 59) {
+    		 minutes++;
+    		 seconds = 0;
+  			}
+		document.getElementById(\"timeBox\").innerHTML = \"Time \" + zeroPad(minutes) + \":\" + zeroPad(seconds);
+ 		}
+
+ function startTimer() {
+     action = window.setInterval(countSecs,1000);
+ }
+
+</script>
+</head>
+<body>
+<button onclick = \"startTimer()\">Start</button>
+<div id=\"timeBox\">Time 00:00</div>
+</body>
+</html>
