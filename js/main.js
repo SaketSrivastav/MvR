@@ -96,9 +96,19 @@ ev.target.appendChild(document.getElementById(data));
 
 	
 	
-	function timer_tick()
-	{
-		index  = index + 1;
-		document.getElementById("divTim").innerHTML =index;
-	}
+function timer_tick()
+{
+	index  = index + 1;
+	document.getElementById("divTim").innerHTML =index;
+}
+
+{
+    var title = 'My Title';
+    var summary = 'This is my summary';
+    var url = 'http://www.mydomain.com/path/to/page';
+    var image = 'http://www.mydomain.com/images/myimage.png';
+ 
+    window.open('http://www.facebook.com/sharer.php?s=100&p[title]='+encodeURIComponent(title)+'&p[url]='+encodeURIComponent(url)+'&p[summary]='+encodeURIComponent(summary)+'&p[images][0]='+encodeURIComponent(image), '_blank', 'toolbar=0,location=0,menubar=0');
+    return false;
+}
 
