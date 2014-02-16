@@ -76,15 +76,19 @@ var data=ev.dataTransfer.getData("Text");
 ev.target.appendChild(document.getElementById(data));
 	if(document.getElementById(data).title == 200)
 	{
-	    alert("right");
+	    //alert("right");
 		document.getElementById(data).style.display = 'none';
 		imgCount++;
-		if( imgCount == 42 )
+		if( imgCount == 22 ){
 		     obj.Stop();
+		     $('#runner').runner('stop');
+		     post_fb();
+		}
 	}
 	else
 	{
-		alert("wrong");
+		alert("Naah ! you did it wrong ! now you got to start again !");
+	   location.reload();	
 	}
 	
 }
@@ -96,15 +100,19 @@ ev.target.appendChild(document.getElementById(data));
 //alert(document.getElementById(data).title);
 	if(document.getElementById(data).title == 100)
 	{
-		alert("right");
+		//alert("right");
 		document.getElementById(data).style.display = 'none';
 		imgCount++;
-		if( imgCount == 42 )
+		if( imgCount == 22 ){
 		     obj.Stop();
+		     $('#runner').runner('stop');
+		     post_fb();
+		}
 	}
 	else
 	{
-	   alert("wrong");	
+	   alert("Naah ! you did it wrong ! now you got to start again !");
+	   location.reload();	
 	}
 	
 }
@@ -120,8 +128,8 @@ function timer_tick()
 
 function post_fb()
 {
-    var title = 'My Title';
-    var summary = 'This is my summary';
+    var title = document.getElementById("runner").innerHTML;
+    var summary = 'This is my score !! Beat me if you can !';
     var url = 'http://www.mydomain.com/path/to/page';
     var image = 'http://www.mydomain.com/images/myimage.png';
  
