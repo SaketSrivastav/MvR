@@ -60,6 +60,12 @@ ev.dataTransfer.setData("Text",ev.target.id);
 if( go == 0 ){
     go = 1;
 	obj.Start();
+	$('#runner').runner({
+	    countdown:false,
+	    startAt: 0,
+	    milliseconds: true,
+	});
+	$('#runner').runner('start');
 }
 }
 
