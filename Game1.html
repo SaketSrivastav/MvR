@@ -264,6 +264,13 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="ico/favicon.png">
+                                   
+    <link href="css/TimeCircles.css" rel="stylesheet">
+    <link href="css/readme.css" rel="stylesheet">
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+        
   </head>
 
   <body>
@@ -274,6 +281,7 @@
     ================================================== -->
     <div class="navbar-wrapper">
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      
       <div class="container">
 
         <div class="navbar navbar-inverse">
@@ -308,6 +316,13 @@
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
+		<div align="center" class="panel panel-default">
+			<div class="panel-body" align="center">
+    			<div class="example stopwatch"></div>
+    			<button class="btn btn-success btn-small start">Start</button>
+    			<button class="btn btn-danger btn-small stop">Stop</button>
+			</div>
+		</div>
         <br/><br/><br/><br/>
       <div id="div1" style="float: left;width:15%;padding-top: 100px;border:1px solid #aaaaaa" align="center" ondrop="drop(event)" ondragover="allowDrop(event)" >
       	
@@ -347,15 +362,25 @@
     <script src="js/bootstrap-collapse.js"></script>
     <script src="js/bootstrap-carousel.js"></script>
     <script src="js/bootstrap-typeahead.js"></script>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
-    
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="js/TimeCircles.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(".example").TimeCircles({
+            	time : {
+            		Days : {show : false}
+            	},
+            	start : false
+            });
+            
+            $(".stop").click(function(){
+                $(".example.stopwatch").TimeCircles().stop();
+            });
+            $(".start").click(function(){
+                $(".example.stopwatch").TimeCircles().start();
+            });
+        });
+    </script>    
     <script src="js/holder.js"></script>
   </body>
 </html>

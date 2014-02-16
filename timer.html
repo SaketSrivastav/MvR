@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TimeCircles Readme / documentation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/TimeCircles.css" rel="stylesheet">
+        <link href="css/readme.css" rel="stylesheet">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/TimeCircles.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $(".example").TimeCircles();
+                
+                $(".stop").click(function(){
+                    $(".example.stopwatch").TimeCircles().stop();
+                });
+                $(".start").click(function(){
+                    $(".example.stopwatch").TimeCircles().start();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row show-grid" style="padding-top: 70px;">
+                <div class="col-lg-9">                    
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="example stopwatch"></div>
+                            <button class="btn btn-success btn-small start">Start</button>
+                            <button class="btn btn-danger btn-small stop">Stop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

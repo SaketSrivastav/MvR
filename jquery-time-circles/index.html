@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="inc/TimeCircles.js"></script>
+        <link rel="stylesheet" href="inc/TimeCircles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>TimeCircle examples</h1>
+            <h2>Time since page was opened</h2>
+            <div>
+                <div style="float: left; width: 100px;">
+                    <br>
+                    <button class="btn btn-success btn-block fadeIn">Fade in</button><br>
+                    <button class="btn btn-danger btn-block fadeOut">Fade out</button>
+                </div>
+                <div id="PageOpenTimer" style="width: 500px; height: 125px; float: left"></div>
+            </div>
+        </div>
+        <script>
+            $("#PageOpenTimer").TimeCircles();
+            // Fade in and fade out are examples of how chaining can be done with TimeCircles
+            $(".fadeIn").click(function() {
+                $("#PageOpenTimer").fadeIn();
+            });
+            $(".fadeOut").click(function() {
+                $("#PageOpenTimer").fadeOut();
+            });
+
+        </script>       
+    </body>
+</html>
