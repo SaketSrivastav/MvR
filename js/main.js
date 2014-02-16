@@ -70,12 +70,17 @@ var data=ev.dataTransfer.getData("Text");
 ev.target.appendChild(document.getElementById(data));
 	if(document.getElementById(data).title == 200)
 	{
-	    
+	    alert("right");
 		document.getElementById(data).style.display = 'none';
 		imgCount++;
 		if( imgCount == 42 )
 		     obj.Stop();
 	}
+	else
+	{
+		alert("wrong");
+	}
+	
 }
 function drop2(ev)
 {
@@ -85,10 +90,15 @@ ev.target.appendChild(document.getElementById(data));
 //alert(document.getElementById(data).title);
 	if(document.getElementById(data).title == 100)
 	{
+		alert("right");
 		document.getElementById(data).style.display = 'none';
 		imgCount++;
 		if( imgCount == 42 )
 		     obj.Stop();
+	}
+	else
+	{
+	   alert("wrong");	
 	}
 	
 }
@@ -102,6 +112,7 @@ function timer_tick()
 	document.getElementById("divTim").innerHTML =index;
 }
 
+function post_fb()
 {
     var title = 'My Title';
     var summary = 'This is my summary';
